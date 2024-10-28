@@ -52,7 +52,7 @@ jobs:
             git config --local user.email "actions@github.com"
             git config --local user.name "GitHub Action"
             if [ -n "$(git status --porcelain)" ]; then
-            git add playlist
+            git add playlist.json
             git commit -m "Automatic update"
             git push
             else

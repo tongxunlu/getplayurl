@@ -4,7 +4,7 @@ import requests
 import os
 
 uid = os.getenv('UID')
-json_file = 'playlist'
+json_file = 'playlist.json'
 
 channel_map = json.loads( os.getenv('ROOTIDS') )
 print(f"channel_map类型是: {type(channel_map)}")  # 检查类型
