@@ -20,6 +20,9 @@ on:
 env:
   #设置为东八区
   TZ: Asia/Shanghai
+  ROOTIDS: ${{ variables.ROOTIDS }}
+  LIVE_API: ${{ variables.LIVE_API }}
+  HEADERS: ${{ variables.HEADERS }}
   
 jobs:
   build:
