@@ -7,7 +7,8 @@ uid = os.getenv('UID')
 json_file = 'playlist'
 
 channel_map = json.loads( os.getenv('ROOTIDS') )
-return channel_map  # 如果未找到 URL，返回错误消息
+print(type(channel_map))  # 检查类型
+print(channel_map)        # 检查内容
 root_ids = {}
 
 
