@@ -7,8 +7,8 @@ uid = os.getenv('UID')
 json_file = 'playlist'
 
 channel_map = json.loads( os.getenv('ROOTIDS') )
-print(type(channel_map))  # 检查类型
-print(channel_map)        # 检查内容
+print("channel_map类型是:"+type(channel_map))  # 检查类型
+print("channel_map内容是:"+channel_map)        # 检查内容
 root_ids = {}
 
 
@@ -55,6 +55,11 @@ def get_channel_url(channel_id):
 with open(json_file, 'w') as f:
     f.write("")
 
+# 合并为一个字典
+merged_channel_map = {}
+for channel in channel_map:
+    merged_channel_map.update(channel)
+    
 # Fetch channel URLs
 for channel, live_id in channel_map.items():
     root_id = get_channel_url(live_id)
