@@ -9,8 +9,6 @@ channel_map = json.loads( os.getenv('ROOTIDS') )
 
 root_ids = {}
 
-import json
-import requests
 
 def get_channel_url(channel_id):
     # 分割 ID 以处理可能的后缀
