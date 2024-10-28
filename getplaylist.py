@@ -15,7 +15,7 @@ import requests
 def get_channel_url(channel_id):
     # 分割 ID 以处理可能的后缀
     temp_id = channel_id.split("-")
-    base_id = temp_id[0]  # 基础 ID (例如: "Live1704966749996185")
+    base_id = temp_id[0] 
     temp_index = 1 if len(temp_id) > 1 else 0  # 根据后缀的存在确定索引
 
     # 请求的 URL 和数据
