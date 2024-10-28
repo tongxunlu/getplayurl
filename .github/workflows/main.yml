@@ -42,7 +42,7 @@ jobs:
       - name: Install dependencies
         run: pip install opencv-python requests 
       - name: Run gengxinsichuanip
-        run: python ${{ github.workspace }}/ott.py
+        run: python ${{ github.workspace }}/getplaylist.py
 
      
       - name: Commit results
