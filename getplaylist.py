@@ -55,13 +55,13 @@ def get_channel_url(channel_id):
 with open(json_file, 'w') as f:
     f.write("")
 
-# 合并为一个字典
+# 合并为一个字典,生成一个新的merged_channel_map给下面遍历使用
 merged_channel_map = {}
 for channel in channel_map:
     merged_channel_map.update(channel)
     
 # Fetch channel URLs
-for channel, live_id in channel_map.items():
+for channel, live_id in merged_channel_map.items():
     root_id = get_channel_url(live_id)
     root_ids[channel] = root_id
     time.sleep(0.5)  # Set request interval (0.5 seconds)
